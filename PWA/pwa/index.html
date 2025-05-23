@@ -17,6 +17,10 @@
     <link rel="manifest" href="manifest.json">
 
     <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
         body {
             font-family: sans-serif;
         }
@@ -25,8 +29,8 @@
             background-size: cover;
             padding: 40px;
             border: solid 1px black;
-            width: 800px;
-            height: 600px;
+            width: auto;
+            height: calc(100vh - 80px);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -60,9 +64,9 @@
 
         @media (max-width: 600px) {
             #container {
-                width: 100vw;
-                height: 100vh;
-                background-size: contain;
+                width: auto;
+                height: calc(100vh - 80px);
+                background-size: auto;
             }
             #clock {
                 width: 90%;
