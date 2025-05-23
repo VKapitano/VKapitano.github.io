@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Varela+Round&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+        }
+        #container {
+            background: url("./images/disseminated-stars-in-the-galaxy-background-6j6bliaq1agycjsr.jpg");
+            background-size: cover;
+            padding: 40px;
+            border: solid 1px black;
+            width: 800px;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #clock {
+            background-color: #7E7ACF;
+            display: flex;
+            justify-content: center;
+            width: 420px;
+            height: 100px;
+            border: solid 3px black;
+            border-radius: 50px;
+            align-items: center;
+        }
+        #sat_u_naslovu_div {
+            padding: 5px;
+            width: 215px;
+            text-align: left;
+            margin-left: 5px;
+            /*border: solid 0.5px black;*/
+        }
+        #doba_div {
+            padding: 5px;
+            width: 70px;
+            text-align: right;
+            margin-right: 5px;
+            overflow: hidden;
+            box-sizing: border-box;
+            /*border: solid 0.5px black;*/
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="clock">
+            <div id="sat_u_naslovu_div">
+                <h1 id="sat_u_naslovu">
+    
+                </h1>
+            </div>
+            <div id="doba_div">
+                <h1 id="doba">
+    
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let my_div = document.getElementById("sat_u_naslovu");
+        let doba = document.getElementById("doba");
+        function vrijeme() {
+            let trenutak = new Date();
+            let godina = trenutak.getFullYear();
+            let mjesec = trenutak.getMonth();
+            let dan = trenutak.getDay();
+            let sat = trenutak.getHours();
+            let minuta = trenutak.getMinutes();
+            let sekunda = trenutak.getSeconds();
+            let lista_vremena = [trenutak, godina, mjesec, dan, sat, minuta, sekunda]
+            let doba_dana;
+            if (sat<13) {doba_dana = "am"} else {doba_dana = "pm"; sat=sat-12};
+            if (sat<10) {sat = "0" + sat.toString()};
+            if (minuta<10) {minuta = "0" + minuta.toString()};
+            if (sekunda<10) {sekunda = "0" + sekunda.toString()};
+            my_div.innerHTML = sat + " : " + minuta + " : " + sekunda + " ";
+            doba.innerHTML = doba_dana;
+        }
+
+        setInterval(vrijeme, 1000);
+    </script>
+</body>
+</html>
