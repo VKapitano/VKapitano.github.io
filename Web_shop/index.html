@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --svjetlija_boja: rgb(255, 255, 209);
+            --boja_2: rgb(223, 211, 199);
+            --boja_3: #c7b096;
+            --tamnija_boja: #4e341c;
+            
+            --max_sirina: 1200px;
+            --my_margin: 20px;
+            --my_border_radius: 25px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration-line: none;
+        }
+
+        h3 {
+            margin: 10px;
+        }
+
+        /*Header*/
+        header {
+            /*background-image: url("./images/physics-background-hdye0j7hmn60ay6z.jpg");*/
+            /*background-color: rgb(228, 228, 135);*/
+            background-color: var(--svjetlija_boja);
+            /*background-size: cover;
+            background-position: bottom;*/
+            width: 100%;
+            height: 250px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        header .h_container {
+            width: 100%;
+            max-width: var(--max_sirina);
+            display: flex;
+            align-items: center;
+        }
+        header .h_container:nth-of-type(2) {
+            background-color: var(--boja_3);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        header .h_container:nth-of-type(2) a {
+            padding: 5px;
+            background-color: var(--boja_2);
+            font-style: sans-serif;
+            color: var(--tamnija_boja);
+        }
+        header .h_container a #logo {
+            width: 300px;
+            margin-left: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        header img {
+            height: 150px;
+            width: auto;
+        }
+        header h1 {
+            text-transform: uppercase;
+            font-family: cursive;
+            margin: 0px;
+            margin-top: 5px;
+            color: var(--tamnija_boja);
+        }
+        header .h_container #header_right {
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header .h_container #header_right input {
+            width: 50%;
+            height: 25%;
+            font-size: 1rem;
+            padding: 5px;
+            border: 1px var(--boja_3) solid;
+            border-radius: 5px;
+        }
+
+        /*Section*/
+        section {
+            background-color: var(--boja_2);
+            min-height: 80vh;
+            display: flex;
+            justify-content: center;
+        }
+        section .s_container {
+            width: 100%;
+            max-width: var(--max_sirina);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        section .s_container #drop_div {
+            background-color: var(--boja_3);
+            width: 20%;
+            height: 100%;
+        }
+        section .s_container #hero {
+            background-image: url("./images/pexels-fotios-photos-1430796.jpg");
+            background-size: cover;
+            width: 90%;
+            max-width: 900px;
+            aspect-ratio: 2 / 1;
+            margin: var(--my_margin);
+            border-radius: var(--my_border_radius);
+            display: flex;
+            align-items: center;
+        }
+        section .s_container #hero a {
+            padding: 5px;
+            margin-left: 40px;
+            border-radius: 5px;
+            box-shadow: 0.4rem 0.34rem 0.5rem black;
+            background-color: var(--boja_2);
+            font-style: sans-serif;
+            color: black;
+        }
+        section .s_container #hero_kategorije {
+            /*background-color: grey;*/
+            width: 100%;
+            max-width: 1000px;
+            height: auto;
+            margin: var(--my_margin);
+            border-radius: var(--my_border_radius);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: baseline;
+        }
+        section .s_container #hero_kategorije h2 {
+            width: 100%;
+            margin: 15px;
+        }
+        section .s_container #hero_kategorije .gl_kateg_box{
+            width: 20%; 
+            margin: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .gl_kateg_box div {
+            width: 100%;
+            aspect-ratio: 1.5 / 1;
+            border-radius: var(--my_border_radius);
+            transition: background-size 0.5s ease;
+        }
+        section .s_container #hero_kategorije .gl_kateg_box h3 {
+            transition: color 0.5s ease;
+        }
+        .gl_kateg_box:first-of-type div{
+            background-image: url("./images/pexels-pixabay-60582.jpg");
+            background-size: cover;
+        }
+        .gl_kateg_box:nth-of-type(2) div{
+            background-image: url("./images/pexels-pixabay-414860.jpg");
+            background-color: black;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .gl_kateg_box:nth-of-type(3) div{
+            background-image: url("./images/pexels-pixabay-54101.jpg");
+            background-size: cover;
+        }
+        .gl_kateg_box:nth-of-type(4) div{
+            background-image: url("./images/pexels-bopopics-14747971.jpg");
+            background-size: cover;
+        }
+        section .s_container #hero_kategorije .gl_kateg_box h3 {
+            color: var(--tamnija_boja);
+            font-family: sans-serif;
+        }
+        .gl_kateg_box:hover div{
+            background-size: 110%;
+            background-position: center;
+        }
+        .gl_kateg_box:nth-of-type(2):hover div{
+            background-size: 80%;
+        }
+        .gl_kateg_box:hover h3 {
+            color: white;
+        }
+
+        /*Footer*/
+        footer {
+            background-color: var(--svjetlija_boja);
+            width: 100%;
+            min-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="h_container">
+            <a href=".">
+                <div id="logo">
+                    <img src=".\images\logo.svg" alt="">
+                    <h1>Physics books</h1>
+                </div>
+            </a>
+            <div id="header_right">
+                <input type="text" placeholder="Pretraži">
+            </div>
+        </div>
+        <div class="h_container">
+            <a href="/">Katalog</a>
+            <a href=".\pages\o_nama.html">O nama</a>
+            <a href=".\pages\kontakt.html">Kontakt</a>
+        </div>
+    </header>
+    <section>
+        <div class="s_container">
+            <div id="hero">
+                <a href="/"><h3>Istraži ponudu</h3></a>
+            </div>
+            <div id="hero_kategorije">
+                <h2>Glavne kategorije</h2>
+                <a class="gl_kateg_box" href="/">
+                    <div></div>
+                    <h3>Uvod u fiziku</h3>
+                </a>
+                <a class="gl_kateg_box" href="/">
+                    <div></div>
+                    <h3>Napredna fizika</h3>
+                </a>
+                <a class="gl_kateg_box" href="/">
+                    <div></div>
+                    <h3>Matematika</h3>
+                </a>
+                <a class="gl_kateg_box" href="/">
+                    <div></div>
+                    <h3>Ostali priručnici</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+</html>
