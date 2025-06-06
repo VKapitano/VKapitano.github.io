@@ -68,6 +68,14 @@
             height: 500px;
         }
 
+        .card-hover-raise {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-hover-raise:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
     </style>
 </head>
 <body>
@@ -168,6 +176,72 @@
             <!--<div class="container my-4">
                 <img class="img-fluid rounded-4" src=".\images\pexels-fotios-photos-1430796.jpg" alt="">
             </div>-->
+
+            <div class="container my-5">
+                <h2 class="mb-4 text-center">Glavne kategorije</h2>
+                <div class="row g-4">
+                    
+                    <!-- Kartica 1 -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                    <a href="./pages/proizvodi.html" class="text-decoration-none text-dark">
+                        <div class="card h-100 rounded-4 overflow-hidden card-hover-raise">
+                        <div style="aspect-ratio: 2 / 1; overflow: hidden;">
+                            <img src="./images/pexels-pixabay-60582.jpg" class="w-100 h-100 object-fit-cover" alt="Uvod u fiziku">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-0">Uvod u fiziku</h5>
+                        </div>
+                        </div>
+                    </a>
+                    </div>
+
+                    <!-- Kartica 2 -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                    <a href="./pages/proizvodi.html" class="text-decoration-none text-dark">
+                        <div class="card h-100 rounded-4 overflow-hidden card-hover-raise">
+                        <div style="aspect-ratio: 2 / 1; overflow: hidden;">
+                            <img src="./images/pexels-pixabay-414860.jpg" class="w-100 h-100 object-fit-cover" alt="Napredna fizika">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-0">Napredna fizika</h5>
+                        </div>
+                        </div>
+                    </a>
+                    </div>
+
+                    <!-- Kartica 3 -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                    <a href="./pages/proizvodi.html" class="text-decoration-none text-dark">
+                        <div class="card h-100 rounded-4 overflow-hidden card-hover-raise">
+                        <div style="aspect-ratio: 2 / 1; overflow: hidden;">
+                            <img src="./images/pexels-pixabay-54101.jpg" class="w-100 h-100 object-fit-cover" alt="Matematika">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-0">Matematika</h5>
+                        </div>
+                        </div>
+                    </a>
+                    </div>
+
+                    <!-- Kartica 4 -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                    <a href="./pages/proizvodi.html" class="text-decoration-none text-dark">
+                        <div class="card h-100 rounded-4 overflow-hidden card-hover-raise">
+                        <div style="aspect-ratio: 2 / 1; overflow: hidden;">
+                            <img src="./images/pexels-bopopics-14747971.jpg" class="w-100 h-100 object-fit-cover" alt="Ostali priručnici">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-0">Ostali priručnici</h5>
+                        </div>
+                        </div>
+                    </a>
+                    </div>
+
+                </div>
+            </div>
+
+
+
         </div>
     </section>
 
