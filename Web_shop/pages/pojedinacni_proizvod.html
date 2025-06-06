@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <style>
+        :root {
+            --svjetlija_boja: rgb(255, 255, 209);
+            --boja_2: rgb(223, 211, 199);
+            --boja_3: #c7b096;
+            --tamnija_boja: #4e341c;
+            --zuta_boja: rgb(240, 212, 56);
+            
+            --max_sirina: 1100px;
+            --my_margin: 20px;
+            --my_border_radius: 25px;
+        }
+
+        a {
+            text-decoration-line: none;
+        }
+
+        header {
+            background-color: var(--svjetlija_boja);
+
+        }
+        header .h_container {
+            /*border: 1px solid black;*/
+            
+        }
+        header .h_container a img {
+            width: 150px;
+        }
+        header .col {
+            /*border: 1px solid black;*/
+        }
+        #logo_a h1 {
+            font-size: 1.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-family: cursive;
+            color: var(--tamnija_boja);
+        }
+        header .nav_bar {
+            background-color: var(--tamnija_boja);
+        }
+        header #icons svg:hover {
+            fill: orange;
+        }
+
+
+        .btn-brown {
+            background-color: #8B4513;
+            color: #fff;
+        }
+        .btn-brown:hover {
+            background-color: #6e3610;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container-lg h_container">
+            <div class="row">
+                <div class="col d-flex justify-content-center justify-content-md-start">
+                    <a id="logo_a" class="d-inline-flex flex-column align-items-center" href="../index.html">
+                        <img src=".\images\logo.svg" alt="">
+                        <h1>Physics books</h1>
+                    </a>
+                </div>
+                <div class="col d-none d-md-flex">
+                    <div id="icons">
+                    <a class="m-1" href="https://www.facebook.com/"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve" width="40" height="40">
+                        <g>
+                            <path d="M24,12.073c0,5.989-4.394,10.954-10.13,11.855v-8.363h2.789l0.531-3.46H13.87V9.86c0-0.947,0.464-1.869,1.95-1.869h1.509   V5.045c0,0-1.37-0.234-2.679-0.234c-2.734,0-4.52,1.657-4.52,4.656v2.637H7.091v3.46h3.039v8.363C4.395,23.025,0,18.061,0,12.073   c0-6.627,5.373-12,12-12S24,5.445,24,12.073z"/>
+                        </g>
+                    </svg></a>
+                    <a class="m-1" href="https://www.instagram.com/"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve" width="40" height="40">
+                        <g>
+                            <path d="M12,2.162c3.204,0,3.584,0.012,4.849,0.07c1.308,0.06,2.655,0.358,3.608,1.311c0.962,0.962,1.251,2.296,1.311,3.608   c0.058,1.265,0.07,1.645,0.07,4.849c0,3.204-0.012,3.584-0.07,4.849c-0.059,1.301-0.364,2.661-1.311,3.608   c-0.962,0.962-2.295,1.251-3.608,1.311c-1.265,0.058-1.645,0.07-4.849,0.07s-3.584-0.012-4.849-0.07   c-1.291-0.059-2.669-0.371-3.608-1.311c-0.957-0.957-1.251-2.304-1.311-3.608c-0.058-1.265-0.07-1.645-0.07-4.849   c0-3.204,0.012-3.584,0.07-4.849c0.059-1.296,0.367-2.664,1.311-3.608c0.96-0.96,2.299-1.251,3.608-1.311   C8.416,2.174,8.796,2.162,12,2.162 M12,0C8.741,0,8.332,0.014,7.052,0.072C5.197,0.157,3.355,0.673,2.014,2.014   C0.668,3.36,0.157,5.198,0.072,7.052C0.014,8.332,0,8.741,0,12c0,3.259,0.014,3.668,0.072,4.948c0.085,1.853,0.603,3.7,1.942,5.038   c1.345,1.345,3.186,1.857,5.038,1.942C8.332,23.986,8.741,24,12,24c3.259,0,3.668-0.014,4.948-0.072   c1.854-0.085,3.698-0.602,5.038-1.942c1.347-1.347,1.857-3.184,1.942-5.038C23.986,15.668,24,15.259,24,12   c0-3.259-0.014-3.668-0.072-4.948c-0.085-1.855-0.602-3.698-1.942-5.038c-1.343-1.343-3.189-1.858-5.038-1.942   C15.668,0.014,15.259,0,12,0z"/>
+                            <path d="M12,5.838c-3.403,0-6.162,2.759-6.162,6.162c0,3.403,2.759,6.162,6.162,6.162s6.162-2.759,6.162-6.162   C18.162,8.597,15.403,5.838,12,5.838z M12,16c-2.209,0-4-1.791-4-4s1.791-4,4-4s4,1.791,4,4S14.209,16,12,16z"/>
+                            <circle cx="18.406" cy="5.594" r="1.44"/>
+                        </g>
+                    </svg></a>
+                    <a class="m-1" href="https://www.youtube.com/"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve" width="40" height="40">
+                        <g id="XMLID_184_">
+                            <path d="M23.498,6.186c-0.276-1.039-1.089-1.858-2.122-2.136C19.505,3.546,12,3.546,12,3.546s-7.505,0-9.377,0.504   C1.591,4.328,0.778,5.146,0.502,6.186C0,8.07,0,12,0,12s0,3.93,0.502,5.814c0.276,1.039,1.089,1.858,2.122,2.136   C4.495,20.454,12,20.454,12,20.454s7.505,0,9.377-0.504c1.032-0.278,1.845-1.096,2.122-2.136C24,15.93,24,12,24,12   S24,8.07,23.498,6.186z M9.546,15.569V8.431L15.818,12L9.546,15.569z"/>
+                        </g>
+                    </svg></a>
+                    <a class="m-1" href="./pages/kosarica.html"><svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="50" height="50"><path d="M22.713,4.077A2.993,2.993,0,0,0,20.41,3H4.242L4.2,2.649A3,3,0,0,0,1.222,0H1A1,1,0,0,0,1,2h.222a1,1,0,0,1,.993.883l1.376,11.7A5,5,0,0,0,8.557,19H19a1,1,0,0,0,0-2H8.557a3,3,0,0,1-2.82-2h11.92a5,5,0,0,0,4.921-4.113l.785-4.354A2.994,2.994,0,0,0,22.713,4.077ZM21.4,6.178l-.786,4.354A3,3,0,0,1,17.657,13H5.419L4.478,5H20.41A1,1,0,0,1,21.4,6.178Z"/><circle cx="7" cy="22" r="2"/><circle cx="17" cy="22" r="2"/></svg></a>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-lg nav_bar"> <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start py-2"> <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"> <use xlink:href="#bootstrap"></use></svg> </a> <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"> <li><a href="../index.html" class="nav-link px-2 text-white">Naslovna</a></li> <li><a href="./proizvodi.html" class="nav-link px-2 text-white">Katalog</a></li> <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li> <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li> <li><a href="#" class="nav-link px-2 text-white">O nama</a></li> </ul> <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search"> <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search"> </form> <div class="text-end"> <button type="button" class="btn btn-outline-light me-2">Login</button> <button type="button" class="btn btn-warning">Sign-up</button> </div> </div> </div> 
+    </header>
+
+    <section>
+        <div class="container-lg s_container">
+
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb p-3">
+                    <li class="breadcrumb-item"><a href="#">Proizvodi</a></li>
+                    <li class="breadcrumb-item"><a href="#">Glavne kategorije</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Glavne kategorije</li>
+                </ol>
+            </nav>
+    
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- Slika knjige -->
+                <div class="col-md-5">
+                    <img src="./images/book_placeholder.png" alt="Naslovnica knjige" class="img-fluid rounded shadow-sm w-100" />
+                </div>
+
+                <!-- Detalji knjige -->
+                <div class="col-md-7">
+                    <h1 class="mb-1">Opća fizika 1</h1>
+                    <h5 class="text-muted mb-3">Autor Autor</h5>
+
+                    <!-- Kratki opis -->
+                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, eos?</p>
+
+                    <!-- Duži opis -->
+                    <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, numquam recusandae! Veniam ad officia dolores, quo nemo magnam a voluptas saepe autem, ex quibusdam, omnis placeat minima fugiat temporibus sit.
+                    </p>
+
+                    <!-- Cijena, SKU i dostupnost -->
+                    <div class="mb-3">
+                    <span class="fw-bold fs-4 text-success">€13.90</span>
+                    </div>
+                    <p><strong>SKU:</strong> BK-000123</p>
+                    <p><strong>Dostupnost:</strong> Na skladištu</p>
+
+                    <!-- Odabir količine -->
+                    <form class="d-flex flex-column flex-sm-row gap-3 align-items-start align-items-sm-end">
+                    <div>
+                        <label for="quantity" class="form-label">Količina:</label>
+                        <input type="number" id="quantity" name="quantity" min="1" value="1" class="form-control w-auto" />
+                    </div>
+                    <button type="submit" class="btn btn-brown px-4">Dodaj u košaricu</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</body>
+</html>
