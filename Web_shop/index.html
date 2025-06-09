@@ -65,8 +65,39 @@
 
         #carouselExampleCaptions .carousel-inner,
         #carouselExampleCaptions .carousel-item {
-            height: 500px;
+            height: 600px;
         }
+
+        @media (min-width: 768px) {
+            #carouselExampleCaptions .carousel-inner,
+            #carouselExampleCaptions .carousel-item {
+                height: 500px;
+            }
+        }
+
+        .carousel-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Izrezuj i centriraj */
+        }
+
+        @media (min-width: 768px) {
+            .carousel-img {
+                height: auto; /* Na većim ekranima, prati širinu */
+                object-fit: contain; /* Opcionalno: može biti cover ili contain ovisno o efektu koji želiš */
+            }
+        }
+
+        .caption-bg {
+            background-color: rgba(255, 255, 255, 0.7); /* tamna prozirna pozadina */
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            color: black;
+            /*text-shadow: 1px 1px 4px rgba(148, 148, 148, 0.9); /* sjena na tekstu */
+        }
+
+
+
 
         .card-hover-raise {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -130,22 +161,22 @@
                 </div>
                 <div class="carousel-inner rounded-4">
                     <div class="carousel-item active">
-                        <img src="./images/pexels-fotios-photos-1430796.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
+                        <img src="./images/pexels-fotios-photos-1430796.jpg" class="d-block w-100 carousel-img" alt="...">
+                        <div class="carousel-caption caption-bg">
                             <h5>First slide label</h5>
                             <p>Some representative placeholder content for the first slide.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="./images/pexels-fotios-photos-1430796.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
+                        <img src="./images/pexels-iamcvsv-197293.jpg" class="d-block w-100 carousel-img" alt="...">
+                        <div class="carousel-caption caption-bg">
                             <h5>Second slide label</h5>
                             <p>Some representative placeholder content for the second slide.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="./images/pexels-fotios-photos-1430796.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
+                        <img src="./images/pexels-jeswin-3781338.jpg" class="d-block w-100 carousel-img" alt="...">
+                        <div class="carousel-caption caption-bg">
                             <h5>Third slide label</h5>
                             <p>Some representative placeholder content for the third slide.</p>
                         </div>
