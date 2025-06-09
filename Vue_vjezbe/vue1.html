@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ message }}</h1>
+        <p>Brojač: <span class="counter-display">{{ counter }}</span></p>
+        <button @click="incrementCounter">Povečaj brojač</button>
+    </div>
+
+    <script>
+        // moze i inportanje iz vue1.js
+        const app = new Vue ({
+            el: '#app', //element na koji ce se vue instanca montirati
+            data: {
+                message: "Pozdrav iz Vue.js-a", //podatci koje ce vue pratiti
+                counter: 0
+            },
+            methods: {
+                // metoda za povecanje brojaca
+                incrementCounter() {
+                    this.counter++;
+                    this.message = `Brojac je sada:${this.counter}`;
+                },
+                toggleActive() {
+                    this.isActive = !this.isActive;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <h2>1. Statički argument</h2>
+        <button @click="greet(userName)">Pozdravi</button>
+        <h2>2. Dinamički argument</h2>
+        <button @click="greet(userName)">Pozdravi  {{ userName }}</button>
+
+        <h2>3. Više argumenata</h2>
+        <button @click="addItem(5, 'čokolada', 12.99)">Dodaj proizvod</button>
+
+        <h2>4. Prosljeđivanje objekta</h2>
+        <button @click="addItemObj(product)">Dodaj proizvod (objekt)</button>
+
+        <h2>5. Prosljeđivanje događaja i dodatnih podataka</h2>
+        <button @click="handleClick($event, 'Dodatna informacija')">Klikni me</button>
+        <hr>
+        <h3>Košarica:</h3>
+        <ul>
+            <li v-for="(item, index) in cart"
+            :key="index">
+                {{ item.name }} - {{ item.quantity }}
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                userName: 'Vedran',
+                product: {
+                    id: 1,
+                    name: 'Sok',
+                    price: 9.99
+                },
+                cart: []
+            },
+            methods: {
+                greet(name) {
+                    alert('Pozdrav, ' + name + '!');
+                },
+                addItem(id, name, price) {
+                    this.cart.push({
+                        id: id,
+                        name: name,
+                        price: price,
+                        quantity: 1
+                    });
+                },
+                addItemObj(product) {
+                    this.cart.push({
+                        ...product,
+                        quantity: 1
+                    });
+                },
+                HandleClick(event, data) {
+                    console.log('Element:', event.target);
+                    console.log('Dodatni podatak:', data);
+                    alert('Kliknuto! Dodatni podatak: ${data}');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

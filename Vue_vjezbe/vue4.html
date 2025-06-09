@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="primjer22">
+        <h2>Osnovni primjer: Povećaj brojač</h2>
+        <button @click="incrementCounter">Povećaj brojač: {{ counter }}</button>
+        <h2>Obrada unosa</h2>
+        <input @input="updateMessage">
+        <p>Poruka: {{ message }}</p>
+        <h2>Slanje forme</h2>
+        <form @submit.prevent="submitForm">
+            <button type="submit">Pošalji</button>
+        </form>
+        <p>{{ submittedText }}</p>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#primjer22',
+            data: {
+                counter: 0,
+                message: '',   //tekstualna poruka iz input polja
+                submittedText: ''   //poruka koja se postavi nakon slanja forme
+            },
+            methods: {
+                incrementCounter() {
+                    this.counter++;
+                },
+                updateMessage(event) {
+                    this.message = event.target.value;
+                },
+                submitForm() {
+                    this.submittedText = 'Forma je uspjesno poslana!';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="htmlSadrzajTest">
+        <div v-html="message"></div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#htmlSadrzajTest',
+            data: {
+                message: '<h2>Pozdrav</h2><p>Ovo je <strong>HTML</strong> sadržaj.</p>'
+            }
+        });
+    </script>
+</body>
+</html>

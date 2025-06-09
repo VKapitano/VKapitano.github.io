@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ title }}</h1>
+
+        <div class="input-group">
+            <input
+            v-model="newTask"
+            @keyup.enter="addTask"
+            placeholder="Unesite novi zadatak">
+            <button @click="addTask">Dodaj</button>
+        </div>
+
+        <ul v-if="tasks.length > 0">
+            <li
+            v-for="(task, index) in task"
+            :key="index"
+            :class="{ completed: task.completed }">
+            <span @click="toggleCompleted(index)">
+                {{ task.text }}
+            </span>
+            <button @click="removeTask(index)">X</button>
+            </li>
+        </ul>
+        <p v-else>Nema zadataka. Dodajte novi zadatak!</p>
+
+        <div class="summary" v-if="tasks.length > 0">
+            Ukupno: {{ tasks.length }}  | Završeno: {{ completedCount }}
+        </div>
+    </div>
+
+    <h3>Izlaz:</h3>
+    <div id="prvi">
+        <p>{{ broj + 1 }}</p>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                title: 'Vue.js Todo lista',
+                newTask: "",
+                tasks: []
+            },
+            computed: {
+                completedCount() {
+                    return this.tasks.filter(task => task.completed).length;
+                }
+            },
+            methods: {
+                addTask() {
+                    if (this.newTask.trim()) {
+                        this.tasks.push({
+                            text: this.newTask.trim(),
+                            completed: false
+                        });
+                        this.newTask = '';
+                    }
+                },
+                toggleComplete(index) {
+                    this.tasks[index].completed = !this.tasks[index].completed;
+                },
+                removeTask(index) {
+                    this.tasks.splice(index, 1);
+                }
+            }
+        });
+
+        new Vue({
+            el: '#prvi',
+            data: {
+                broj: 5
+            }
+        });
+    </script>
+</body>
+</html>
