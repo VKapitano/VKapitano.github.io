@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="header.css">
+    <style>
+        :root {
+            --svjetlija_boja: rgb(255, 255, 209);
+            --boja_2: rgb(223, 211, 199);
+            --boja_3: #c7b096;
+            --tamnija_boja: #4e341c;
+            --zuta_boja: rgb(240, 212, 56);
+            
+            --max_sirina: 1100px;
+            --my_margin: 20px;
+            --my_border_radius: 25px;
+        }
+
+        a {
+            text-decoration-line: none;
+        }
+    </style>
+</head>
+<body>
+    <header id="header-placeholder"></header>
+
+    <section>
+        <div class="container-lg s_container">
+            <!-- Naslov stranice -->
+            <h1 class="mb-4 text-center">O nama</h1>
+
+            <!-- Uvodni tekst -->
+            <div class="mb-5">
+                <p>
+                    Dobrodošli u naš webshop specijaliziran za knjige iz fizike! Naša priča počinje iz ljubavi prema znanosti i želje da učinimo kvalitetnu literaturu dostupnom svima – od učenika i studenata, do profesora i zaljubljenika u fiziku.
+                </p>
+                <p>
+                    <strong>Misija:</strong> Pružiti najbolju selekciju knjiga iz fizike na jednom mjestu, uz brzu dostavu i vrhunsku podršku.
+                </p>
+                <p>
+                    <strong>Vizija:</strong> Postati vodeća online destinacija za sve koji traže znanstvenu literaturu i materijale iz područja fizike.
+                </p>
+            </div>
+
+            <!-- Naš tim -->
+            <div class="mb-5">
+                <h2 class="mb-3">Naš tim</h2>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card h-100 text-center">
+                            <img src="./images/team1.jpg" class="card-img-top" alt="Tim član 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Ana Horvat</h5>
+                                <p class="card-text">Osnivačica i fizičarka. Zadužena za selekciju literature i komunikaciju s izdavačima.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 text-center">
+                            <img src="./images/team2.jpg" class="card-img-top" alt="Tim član 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Ivan Kovač</h5>
+                                <p class="card-text">Web developer i logistika. Brine se da webshop radi brzo i pouzdano.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 text-center">
+                            <img src="./images/team3.jpg" class="card-img-top" alt="Tim član 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Martina Petrović</h5>
+                                <p class="card-text">Korisnička podrška i marketing. Tu je da vam pomogne oko svake narudžbe.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vrijednosti tvrtke -->
+            <div class="mb-5">
+                <h2 class="mb-3">Naše vrijednosti</h2>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">💡 Stručnost i znanje</li>
+                    <li class="list-group-item">🚀 Dostupnost i brzina</li>
+                    <li class="list-group-item">📚 Ljubav prema znanosti</li>
+                    <li class="list-group-item">🤝 Povjerenje i podrška kupcima</li>
+                </ul>
+            </div>
+
+            <!-- Kontakt -->
+            <div class="text-center">
+                <p>Imate pitanja ili želite suradnju? <a href="kontakt.html" class="btn btn-primary mt-2">Kontaktirajte nas</a></p>
+            </div>
+                </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Greška prilikom učitavanja headera:', error));
+    </script>
+</body>
+</html>

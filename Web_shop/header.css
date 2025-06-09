@@ -1,0 +1,43 @@
+:root {
+    --svjetlija_boja: rgb(255, 255, 209);
+    --boja_2: rgb(223, 211, 199);
+    --boja_3: #c7b096;
+    --tamnija_boja: #4e341c;
+    --zuta_boja: rgb(240, 212, 56);
+    
+    --max_sirina: 1100px;
+    --my_margin: 20px;
+    --my_border_radius: 25px;
+}
+
+a {
+    text-decoration-line: none;
+}
+
+header {
+    background-color: var(--svjetlija_boja);
+
+}
+header .h_container {
+    /*border: 1px solid black;*/
+    
+}
+header .h_container a img {
+    width: 150px;
+}
+header .col {
+    /*border: 1px solid black;*/
+}
+#logo_a h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: cursive;
+    color: var(--tamnija_boja);
+}
+header .nav_bar {
+    background-color: var(--tamnija_boja);
+}
+header #icons svg:hover {
+    fill: orange;
+}

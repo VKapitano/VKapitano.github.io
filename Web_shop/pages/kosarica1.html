@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Košarica</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --svjetlija_boja: rgb(255, 255, 209);
+            --boja_2: rgb(223, 211, 199);
+            --boja_3: #c7b096;
+            --tamnija_boja: #4e341c;
+        }
+
+        body {
+            background-color: var(--svjetlija_boja);
+        }
+
+        h2 {
+            color: var(--tamnija_boja);
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 15px;
+        }
+
+        .mybtn {
+            background-color: var(--boja_3);
+            color: white;
+        }
+
+        .mybtn:hover {
+            background-color: var(--boja_2);
+        }
+
+        .total-price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--tamnija_boja);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container my-5">
+    <h2 class="mb-4">Vaša košarica</h2>
+
+    <div class="row g-4">
+        <!-- Proizvod 1 -->
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="./images/book_placeholder.png" class="card-img-top" alt="Opća fizika 1">
+                <div class="card-body">
+                    <h5 class="card-title">Opća fizika 1</h5>
+                    <p class="card-text text-muted">Autor Autor</p>
+                    <p class="fw-bold">€13.90</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proizvod 2 -->
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="./images/book_placeholder.png" class="card-img-top" alt="Opća fizika 2">
+                <div class="card-body">
+                    <h5 class="card-title">Opća fizika 2</h5>
+                    <p class="card-text text-muted">Autor Autor</p>
+                    <p class="fw-bold">€11.50</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proizvod 3 -->
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="./images/book_placeholder.png" class="card-img-top" alt="Opća fizika 3">
+                <div class="card-body">
+                    <h5 class="card-title">Opća fizika 3</h5>
+                    <p class="card-text text-muted">Autor Autor</p>
+                    <p class="fw-bold">€14.80</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ukupna cijena -->
+    <div class="mt-5 d-flex justify-content-between align-items-center">
+        <p class="total-price">Ukupno: €40.20</p>
+        <button class="btn mybtn">Nastavi na plaćanje</button>
+    </div>
+</div>
+
+</body>
+</html>
