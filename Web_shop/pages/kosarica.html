@@ -28,6 +28,7 @@
             border-radius: 12px;
             padding: 16px;
             margin-bottom: 16px;
+            background-color: #fff;
         }
         .cart-item img {
             width: 100px;
@@ -38,13 +39,22 @@
         .cart-total {
             font-weight: bold;
         }
+        .mybtn {
+            background-color: #8B4513;
+            color: #fff;
+            border: none;
+        }
+        .mybtn:hover {
+            background-color: #6e3610;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
     <header id="header-placeholder"></header>
 
     <section>
-        <div class="container-lg s_container">
+        <div class="container-lg s_container  py-5">
             <h2 class="mb-4">Košarica</h2>
 
             <!-- Proizvod 1 -->
@@ -61,6 +71,7 @@
                     <label for="qty1" class="form-label">Količina:</label>
                     <input type="number" id="qty1" class="form-control w-50 d-inline-block" value="2" min="1" readonly>
                     <p class="cart-total mt-2">Ukupno: 200 kn</p>
+                    <button class="btn btn-outline-danger btn-sm mt-2">🗑️ Ukloni</button>
                 </div>
             </div>
 
@@ -78,6 +89,7 @@
                     <label for="qty2" class="form-label">Količina:</label>
                     <input type="number" id="qty2" class="form-control w-50 d-inline-block" value="1" min="1" readonly>
                     <p class="cart-total mt-2">Ukupno: 150 kn</p>
+                    <button class="btn btn-outline-danger btn-sm mt-2">🗑️ Ukloni</button>
                 </div>
             </div>
 
@@ -95,11 +107,18 @@
                     <label for="qty3" class="form-label">Količina:</label>
                     <input type="number" id="qty3" class="form-control w-50 d-inline-block" value="3" min="1" readonly>
                     <p class="cart-total mt-2">Ukupno: 225 kn</p>
+                    <button class="btn btn-outline-danger btn-sm mt-2">🗑️ Ukloni</button>
                 </div>
             </div>
 
-            <div class="text-end mt-4">
-                <h4>Ukupno za platiti: <span class="text-primary">575 kn</span></h4>
+            <!-- Ukupno i gumb za plaćanje -->
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <h4>Ukupno za platiti: <span class="text-primary">575 kn</span></h4>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="./placanje.html" class="btn btn-primary btn-lg mybtn">Nastavi na plaćanje</a>
+                </div>
             </div>
         </div>
     </section>
