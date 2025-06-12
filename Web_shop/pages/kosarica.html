@@ -133,5 +133,56 @@
             })
             .catch(error => console.error('Greška prilikom učitavanja headera:', error));
     </script>
+
+    <script src="proizvodi.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const cartContainer = document.querySelector(".s_container");
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let total = 0;
+    cart.forEach((item, index) => {
+        const subtotal = item.qty * item.price;
+        total += subtotal;
+
+        const html = `
+        <div class="cart-item row align-items-center mb-4">
+            <div class="col-md-2">
+            <img src="${item.image}" alt="${item.title}" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+            <h5>${item.title}</h5>
+            <p>${item.description}</p>
+            <p class="mb-0">Cijena: €${item.price}</p>
+            </div>
+            <div class="col-md-4 text-end">
+            <p class="mb-1">Količina: ${item.qty}</p>
+            <p class="cart-total">Ukupno: €${subtotal.toFixed(2)}</p>
+            <button class="btn btn-outline-danger btn-sm mt-2" onclick="removeItem(${item.id})">🗑️ Ukloni</button>
+            </div>
+        </div>`;
+        cartContainer.insertAdjacentHTML("beforeend", html);
+    });
+
+    cartContainer.insertAdjacentHTML("beforeend", `
+        <div class="row mt-4">
+        <div class="col-md-6">
+            <h4>Ukupno za platiti: <span class="text-primary">€${total.toFixed(2)}</span></h4>
+        </div>
+        <div class="col-md-6 text-end">
+            <a href="./placanje.html" class="btn btn-primary btn-lg mybtn">Nastavi na plaćanje</a>
+        </div>
+        </div>
+    `);
+    });
+
+    function removeItem(id) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart = cart.filter(p => p.id != id);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    location.reload(); // reload da se ažurira prikaz
+    }
+    </script>
+
 </body>
 </html>
