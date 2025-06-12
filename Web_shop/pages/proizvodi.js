@@ -2,30 +2,37 @@
 const products = [
   {
     id: 1,
+    author: "Autor autor",
     title: "Opća fizika 1",
     category: "Napredna fizika",
     price: 13.90,
     image: "./images/book_placeholder.png",
-    description: "",
+    description: "Opis",
+    longDescription: "Detaljniji opis proizvoda.",
+    sku: "BK-000123",
+    availability: "Na skladištu",
   },
   {
     id: 2,
+    author: "Autor autor",
     title: "Opća fizika 2",
     category: "Napredna fizika",
     price: 11.50,
     image: "./images/book_placeholder.png",
-    description: "",
+    description: "Opis",
   },
   {
     id: 3,
+    author: "Autor autor",
     title: "Opća fizika 3",
     category: "Napredna fizika",
     price: 14.80,
     image: "./images/book_placeholder.png",
-    description: "",
+    description: "Opis",
   },
   {
     id: 4,
+    author: "Autor autor",
     title: "Opća fizika 4",
     category: "Matematika",
     price: 14.80,
@@ -34,6 +41,7 @@ const products = [
   },
   {
     id: 5,
+    author: "Autor autor",
     title: "Elektrodinamika 1",
     category: "Napredna fizika",
     price: 11.50,
@@ -42,6 +50,7 @@ const products = [
   },
   {
     id: 6,
+    author: "Autor autor",
     title: "Elektrodinamika 2",
     category: "Napredna fizika",
     price: 11.50,
@@ -50,6 +59,7 @@ const products = [
   },
   {
     id: 7,
+    author: "Autor autor",
     title: "Statistička fizika 1",
     category: "Napredna fizika",
     price: 11.50,
@@ -58,6 +68,7 @@ const products = [
   },
   {
     id: 8,
+    author: "Autor autor",
     title: "Statistička fizika 2",
     category: "Napredna fizika",
     price: 11.50,
@@ -66,6 +77,7 @@ const products = [
   },
   {
     id: 9,
+    author: "Autor autor",
     title: "Kvantna fizika 1",
     category: "Napredna fizika",
     price: 11.50,
@@ -74,6 +86,7 @@ const products = [
   },
   {
     id: 10,
+    author: "Autor autor",
     title: "Kvantna fizika 2",
     category: "Napredna fizika",
     price: 11.50,
@@ -82,6 +95,7 @@ const products = [
   },
   {
     id: 9,
+    author: "Autor autor",
     title: "Uvod u fiziku 1",
     category: "Uvod u fiziku",
     price: 11.50,
@@ -90,6 +104,7 @@ const products = [
   },
   {
     id: 10,
+    author: "Autor autor",
     title: "Uvod u fiziku 2",
     category: "Uvod u fiziku",
     price: 11.50,
@@ -98,6 +113,7 @@ const products = [
   },
   {
     id: 11,
+    author: "Autor autor",
     title: "Osnove fizike 1",
     category: "Uvod u fiziku",
     price: 11.50,
@@ -106,6 +122,7 @@ const products = [
   },
   {
     id: 12,
+    author: "Autor autor",
     title: "Osnove fizike 2",
     category: "Uvod u fiziku",
     price: 11.50,
@@ -114,6 +131,7 @@ const products = [
   },
   {
     id: 13,
+    author: "Autor autor",
     title: "Linearna algebra 1",
     category: "Matematika",
     price: 11.50,
@@ -122,6 +140,7 @@ const products = [
   },
   {
     id: 14,
+    author: "Autor autor",
     title: "Linearna algebra 2",
     category: "Matematika",
     price: 11.50,
@@ -130,6 +149,7 @@ const products = [
   },
   {
     id: 15,
+    author: "Autor autor",
     title: "Matematička analiza 1",
     category: "Matematika",
     price: 11.50,
@@ -138,6 +158,7 @@ const products = [
   },
   {
     id: 16,
+    author: "Autor autor",
     title: "Matematička analiza 2",
     category: "Matematika",
     price: 11.50,
@@ -146,6 +167,7 @@ const products = [
   },
   {
     id: 17,
+    author: "Autor autor",
     title: "Diferencijalna geometrija",
     category: "Matematika",
     price: 11.50,
@@ -154,6 +176,7 @@ const products = [
   },
   {
     id: 18,
+    author: "Autor autor",
     title: "Zbirka formula iz matematike",
     category: "Ostali priručnici",
     price: 11.50,
@@ -162,6 +185,7 @@ const products = [
   },
   {
     id: 19,
+    author: "Autor autor",
     title: "Zbirka formula iz fizike",
     category: "Ostali priručnici",
     price: 11.50,
