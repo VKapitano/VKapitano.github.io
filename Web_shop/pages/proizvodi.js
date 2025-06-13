@@ -1,5 +1,5 @@
-// shop.js
-const products = [
+// proizvodi.js
+window.products = [
   {
     id: 1,
     author: "Autor autor",
@@ -34,7 +34,7 @@ const products = [
     id: 4,
     author: "Autor autor",
     title: "Opća fizika 4",
-    category: "Matematika",
+    category: "Napredna fizika",
     price: 14.80,
     image: "./images/book_placeholder.png",
     description: "",
@@ -94,7 +94,7 @@ const products = [
     description: "",
   },
   {
-    id: 9,
+    id: 10,
     author: "Autor autor",
     title: "Uvod u fiziku 1",
     category: "Uvod u fiziku",
@@ -103,7 +103,7 @@ const products = [
     description: "",
   },
   {
-    id: 10,
+    id: 11,
     author: "Autor autor",
     title: "Uvod u fiziku 2",
     category: "Uvod u fiziku",
@@ -112,7 +112,7 @@ const products = [
     description: "",
   },
   {
-    id: 11,
+    id: 12,
     author: "Autor autor",
     title: "Osnove fizike 1",
     category: "Uvod u fiziku",
@@ -121,7 +121,7 @@ const products = [
     description: "",
   },
   {
-    id: 12,
+    id: 13,
     author: "Autor autor",
     title: "Osnove fizike 2",
     category: "Uvod u fiziku",
@@ -130,7 +130,7 @@ const products = [
     description: "",
   },
   {
-    id: 13,
+    id: 14,
     author: "Autor autor",
     title: "Linearna algebra 1",
     category: "Matematika",
@@ -139,7 +139,7 @@ const products = [
     description: "",
   },
   {
-    id: 14,
+    id: 15,
     author: "Autor autor",
     title: "Linearna algebra 2",
     category: "Matematika",
@@ -148,7 +148,7 @@ const products = [
     description: "",
   },
   {
-    id: 15,
+    id: 16,
     author: "Autor autor",
     title: "Matematička analiza 1",
     category: "Matematika",
@@ -157,7 +157,7 @@ const products = [
     description: "",
   },
   {
-    id: 16,
+    id: 17,
     author: "Autor autor",
     title: "Matematička analiza 2",
     category: "Matematika",
@@ -166,7 +166,7 @@ const products = [
     description: "",
   },
   {
-    id: 17,
+    id: 18,
     author: "Autor autor",
     title: "Diferencijalna geometrija",
     category: "Matematika",
@@ -175,7 +175,7 @@ const products = [
     description: "",
   },
   {
-    id: 18,
+    id: 19,
     author: "Autor autor",
     title: "Zbirka formula iz matematike",
     category: "Ostali priručnici",
@@ -184,7 +184,7 @@ const products = [
     description: "",
   },
   {
-    id: 19,
+    id: 20,
     author: "Autor autor",
     title: "Zbirka formula iz fizike",
     category: "Ostali priručnici",

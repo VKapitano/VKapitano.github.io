@@ -201,6 +201,20 @@
             }
         }
 
+        function addToCart(product) {
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Ako je proizvod već u košarici, povećaj količinu
+            const existingProduct = cart.find(p => p.id === product.id);
+            if (existingProduct) {
+                existingProduct.quantity += product.quantity;
+            } else {
+                cart.push(product);
+            }
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+        }
+
         function setupAddToCartButton() {
             const form = document.querySelector("section form");
             if (!form) return;
@@ -216,7 +230,13 @@
                 return;
                 }
 
-                addToCart(currentProduct.id, quantity);
+                addToCart({
+                    id: currentProduct.id,
+                    title: currentProduct.title,
+                    price: currentProduct.price,
+                    image: currentProduct.image,
+                    quantity: quantity
+                });
 
                 alert(`${currentProduct.title} je dodan u košaricu (${quantity} kom).`);
             });

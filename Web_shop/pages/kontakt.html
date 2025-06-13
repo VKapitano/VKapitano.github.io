@@ -22,6 +22,18 @@
         a {
             text-decoration-line: none;
         }
+
+        .mybtn {
+            background-color: #8B4513;
+            color: #fff;
+            border: none;
+            position: relative;
+            z-index: 100;
+        }
+        .mybtn:hover {
+            background-color: #6e3610;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -50,7 +62,7 @@
                         <label for="poruka" class="form-label">Poruka</label>
                         <textarea class="form-control" id="poruka" rows="5" placeholder="Upišite poruku ovdje..." required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Pošalji poruku</button>
+                    <button type="submit" class="btn mybtn btn-primary">Pošalji poruku</button>
                     </form>
                 </div>
 
