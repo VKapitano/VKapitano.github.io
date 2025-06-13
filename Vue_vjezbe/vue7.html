@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <h2>1. Implicitno proslijeđivanje $event</h2>
+        <button @click="handleClickImplicit">Klikni me</button>
+
+        <h2>2. Eksplicitno proslijeđivanje $event (s dodatnim argumentom)</h2>
+        <button @click="handleClickExplicit($event, 'dodatno-podatak')">Klikni me</button>
+
+        <h2>3. Svojstva miša</h2>
+        <button @click="logMouseEvent($event)">Klik za poziciju miša</button>
+
+        <h2>4. Svojstva tipkovnice</h2>
+        <input type="text" @keyup="logKeyEvent($event)" placeholder="Pritisni tipku">
+
+        <h2>5. Metode event objekta</h2>
+        <form @submit.prevent="handleSubmit">
+            <input type="text" placeholder="Upiši nešto">
+            <button type="submit">Pošalji</button>
+        </form>
+
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            methods: {
+                handleClickImplicit(event) {
+                    console.log('Tip događaja: ', event.type);
+                    console.log('Element: ', event.target);
+                },
+                handleClickImplicit(event, data) {
+                    console.log('Tip događaja: ', event.type);
+                    console.log('Tip podataka: ', data);
+                },
+                logMouseEvent(event) {
+                    console.log('Pozicija miša (prozor): ', event.clientX, event.clientY);
+                    console.log('Pozicija miša (dokument): ', event.pageX, event.pageY);
+                },
+                logKeyEvent(event) {
+                    console.log('Tipka: ', event.key);
+                    console.log('Alt pritisnut: ', event.altKey);
+                    console.log('Crtl pritisnut: ', event.ctrlKey);
+                    console.log('Shift pritisnut: ', event.shiftKey);
+                },
+                handleSubmit(event) {
+                    event.preventDefault();
+                    alert('Forma je presretnuta vlastitom logikom.');
+                }
+            }
+        })
+    </script>
+</body>
+</html>
