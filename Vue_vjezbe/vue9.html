@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <h2>Postavi pitanje:</h2>
+        <input type="text"
+        v-model="question"
+        placeholder="Unesite svoje pitanje...">
+
+        <p>Trenutno pitanje: <strong>{{ question }}</strong></p>
+
+        <div v-if="answer" class="answer">
+            <h3>Odgovor:</h3>
+            <p>{{ answer }}</p>
+        </div>
+        <div v-else-if="question" class="answer">
+            <p>Dohvaćam odgovor</p>
+        </div>
+        <div v-else class="answer">
+            <p>Molimo unesite pitanje kako biste dobili odgovor.</p>
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                question: "",
+                answer: null,
+            },
+            watch: {
+                question: function (newValue, oldValue) {
+                    console.log("Pitanje se promijenilo!");
+                    console.log("Stara vrijedsnot:", oldValue);
+                    console.log("Nova vrijednost:", newValue);
+
+                    this.answer = null;
+
+                    if (newValue.trim().length > 0) {
+                        this.fetchAnswer();
+                    } else {
+                        this.answer = null;
+                    }
+                }
+            },
+            methods: {
+                fetchAnsver: function() {
+                    setTimeout( () => {
+                        if (this.question.includes("Vue")) {
+                            this.answer = "Vue.js je progresivni JavaScript okvir za izgradnju korisničkih sučelja.";
+                        } else if (this.question.includes("watcher")) {
+                            this.answer = "Watcher u Vue.js-u omogućuje vam da reagirate na promjene reaktivnih podataka.";
+                        } else {
+                            this.answer = "Žao mi je, ne mogu pronaći odgovor na vaše pitanje.";
+                        }
+                    }, 1000);
+                }
+            }
+        })
+    </script>
+</body>
+</html>
